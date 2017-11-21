@@ -23,8 +23,8 @@ public class Avion extends Personajes {
         this.posX=350;
         this.posY=470;
         this.vidas=3;
-        
-        this.imagen= new ImageIcon(this.getClass().getResource("/Imagenes/Avion.png"));
+        this.url=this.getClass().getResource("/Imagenes/Avion.png");
+        this.imagen= new ImageIcon(url);
         
     }
 

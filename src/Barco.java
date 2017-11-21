@@ -23,8 +23,8 @@ public class Barco extends Personajes {
         this.posY=-80;
         this.width=100;
         this.height=40;     
-        
-        this.imagen= new ImageIcon(this.getClass().getResource("/Imagenes/barco.png"));
+        this.url=this.getClass().getResource("/Imagenes/barco.png");
+        this.imagen= new ImageIcon(url);
         
     }
     

@@ -1,7 +1,8 @@
 
 import java.awt.Graphics2D;
-import java.awt.Rectangle;
+import java.awt.Image;
 import java.awt.geom.Rectangle2D;
+import java.net.URL;
 
 import javax.swing.ImageIcon;
 
@@ -19,6 +20,7 @@ public class Personajes {
     
     int posX, posY, width, height;
     ImageIcon imagen;
+    URL url;
     
     public Personajes(){
     
@@ -41,6 +43,10 @@ public class Personajes {
         this.posX = posX;
     }
 
+    public void setImagen(ImageIcon imagen) {
+        
+    }
+
     public void setPosY(int posY) {
         this.posY = posY;
     }
@@ -52,6 +58,14 @@ public class Personajes {
 
     public ImageIcon getImagen() {
         return imagen;
+    }
+
+    public URL getUrl() {
+        return url;
+    }
+
+    public void setUrl(URL url) {
+        this.url = url;
     }
     
     
