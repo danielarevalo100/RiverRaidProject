@@ -29,7 +29,7 @@ import javax.swing.JPanel;
  */
 public class MenuPrincipal extends JPanel {
     private Ventanas dueño;
-    private JButton salir,jugarBoton,insBoton,creditosBoton,top10;
+    private JButton salir,jugarBoton,jugarBoton2,insBoton,creditosBoton,top10;
     
     private final ImageIcon fondo;
     public MenuPrincipal(Ventanas dueños){
@@ -48,6 +48,7 @@ public class MenuPrincipal extends JPanel {
         jugarBoton.setBorderPainted(false);
         
         
+        
         jugarBoton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent ae) {
@@ -61,7 +62,21 @@ public class MenuPrincipal extends JPanel {
             }
         });
         
-        
+        jugarBoton2= new JButton("JUGAR");
+        jugarBoton2.setFocusable(false);
+        jugarBoton2.setBackground(new Color(170, 38, 75));
+        jugarBoton2.setFont(new Font("Arial", Font.PLAIN, 18));
+        jugarBoton2.setForeground(Color.white);
+        jugarBoton2.setSize(100, 50);
+        jugarBoton2.setVisible(true);
+        jugarBoton2.setLocation(690, 550);
+        jugarBoton2.setBorderPainted(false);
+        jugarBoton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                dueño.iniciarJuego2();
+            }
+        });
         
         insBoton= new JButton("INSTRUCCIONES");
         insBoton.setFocusable(false);
@@ -136,6 +151,7 @@ public class MenuPrincipal extends JPanel {
         this.setFocusable(false);
         this.setPreferredSize(new Dimension(800, 600));
         this.add(insBoton);
+        this.add(jugarBoton2);
         this.add(creditosBoton);
         this.add(jugarBoton);
         this.add(top10);

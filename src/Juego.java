@@ -585,7 +585,11 @@ public class Juego extends JPanel {
             if (avion.area().intersects(barco.area())) {
                   //System.out.println("perdio una vida");
                   avion.setVidas(avion.getVidas()-1);
-                  
+                  AudioClip sonido;
+                    sonido=java.applet.Applet.newAudioClip(this.getClass().getResource("/sonidos/bomba.wav"));
+         
+                    sonido.play();
+                    explot.add(new explosion(barco.getPosX(), barco.getPosY()));
                   
                   if (avion.getVidas()>0) {
                     //  System.out.println("ha perdido una vida");

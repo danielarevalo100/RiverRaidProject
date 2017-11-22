@@ -105,7 +105,7 @@ public class top10 extends JPanel{
                     partes=linea.split("-");
                     
                     if (points[i]==Integer.parseInt(partes[0])) {
-                        ta1.setText(ta1.getText()+"nombres: "+partes[1]+" puntaje: "+partes[0]+"\n\n");
+                        ta1.setText(ta1.getText()+"nombre: "+partes[1]+" puntaje: "+partes[0]+"\n\n");
 ///aqui se incluye al text field  System.out.println("nombre: "+partes[1]+"puntaje"+partes[0]);
                     }
                 }

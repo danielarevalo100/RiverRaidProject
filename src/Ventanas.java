@@ -21,12 +21,14 @@ public class Ventanas extends JPanel {
      Datos datos;
      top10 t10;
      creditos cred;
+     panel2 juego2;
     public Ventanas(){
         this.setFocusable(false);
         menu = new MenuPrincipal(this);
         jugar = new Juego(this);
         jugar.requestFocus();
-        datos= new Datos();
+        //datos= new Datos();
+        
         
         ins=new instrucciones(this);
         //this.setLayout(null);
@@ -63,7 +65,8 @@ public class Ventanas extends JPanel {
     public void perdio(){
         this.setVisible(false);
         jugar.setFocusable(false);
-        datos.setPuntos(jugar.getPuntos());
+        datos=new Datos(jugar.getPuntos());
+        
        this.remove(jugar);
        
        datos.setVisible(true);
@@ -120,4 +123,14 @@ public class Ventanas extends JPanel {
         
     }
     
+    public void iniciarJuego2(){
+        
+        this.setVisible(false);
+        this.remove(menu);
+        juego2= new panel2(this);
+        juego2.setVisible(true);
+        this.add(juego2);
+        this.setVisible(true);
+        
+    } 
 }
