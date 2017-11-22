@@ -6,6 +6,9 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.FocusManager;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,13 +20,16 @@ import javax.swing.JPanel;
  * and open the template in the editor.
  */
 
-/**
+/** Menu principal el jugador decide entre una serie de opciones dadas a traves de botones, puede decidir entre empezar el juego,
+ * leer las instrucciones, ver los creditos, observar los mejores jugadores y salir.
+ * 
+ * 
  *
  * @author Daniel
  */
 public class MenuPrincipal extends JPanel {
     private Ventanas dueño;
-    private JButton jugarBoton,insBoton,creditosBoton;
+    private JButton salir,jugarBoton,insBoton,creditosBoton,top10;
     
     private final ImageIcon fondo;
     public MenuPrincipal(Ventanas dueños){
@@ -66,6 +72,13 @@ public class MenuPrincipal extends JPanel {
         insBoton.setVisible(true);
         insBoton.setLocation(300, 250);
         insBoton.setBorderPainted(false);
+        insBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                dueño.instruc();
+            }
+        });
+        
         
         creditosBoton= new JButton("CREDITOS");
         creditosBoton.setFocusable(false);
@@ -76,8 +89,48 @@ public class MenuPrincipal extends JPanel {
         creditosBoton.setVisible(true);
         creditosBoton.setLocation(300, 350);
         creditosBoton.setBorderPainted(false);
+        creditosBoton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                dueño.creditos();
+            }
+        });
         
+        top10=new JButton("TOP 10");
+         top10.setFocusable(false);
+        top10.setBackground(new Color(170, 38, 75));
+        top10.setFont(new Font("Arial", Font.PLAIN, 20));
+        top10.setForeground(Color.white);
+        top10.setSize(200, 80);
+        top10.setVisible(true);
+        top10.setLocation(300, 450);
+        top10.setBorderPainted(false);
+        top10.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                try {
+                    dueño.top10();
+                } catch (IOException ex) {
+                    Logger.getLogger(MenuPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
         
+        salir=new JButton("Salir");
+        salir.setFocusable(false);
+        salir.setBackground(new Color(170, 38, 75));
+        salir.setFont(new Font("Arial", Font.PLAIN, 20));
+        salir.setForeground(Color.white);
+        salir.setSize(100, 50);
+        salir.setVisible(true);
+        salir.setLocation(10, 550);
+        salir.setBorderPainted(false);
+        salir.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                System.exit(0);
+            }
+        });
         
         fondo=new ImageIcon(this.getClass().getResource("/Imagenes/fondoMenu.jpg"));
         this.setFocusable(false);
@@ -85,6 +138,8 @@ public class MenuPrincipal extends JPanel {
         this.add(insBoton);
         this.add(creditosBoton);
         this.add(jugarBoton);
+        this.add(top10);
+        this.add(salir);
         
         
         this.setVisible(true);

@@ -9,7 +9,8 @@ import javax.swing.ImageIcon;
  * and open the template in the editor.
  */
 
-/**
+/**El Barco es un enemigo en el juego, hijo de la clase personajes, al generarse aleatoriamente necesita recibir en su constructor un entero
+ * n.
  *
  * @author Daniel
  */

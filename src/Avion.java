@@ -8,13 +8,20 @@ import javax.swing.ImageIcon;
  * and open the template in the editor.
  */
 
-/**
+/**El avion es el protagonista de este juego, siendo el jugador quien lo conduce,este avion, hijo de la clase Personajes,
+ * cuenta con ciertos atributos de mas.
+ * 
+ * Las vidas: el avion cuenta con 3 vidas desde su inicio, al perder las 3 el juego finalizaria.
+ * 
+ * Atributo("gas"): Este atrubuto se creo para llevar de manera eficiente el control de combustible que el avion acarrea
+ * ya que de quedarce sin este recurso perderia una vida.
  *
  * @author Daniel
  */
 public class Avion extends Personajes {
     
     int vidas;
+    int gas=150;
 
     public Avion() {
         
