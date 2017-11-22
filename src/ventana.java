@@ -1,6 +1,10 @@
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -16,10 +20,10 @@ import javax.swing.JPanel;
  */
 public class ventana extends JFrame {
     Ventanas Ventana;
-    public ventana(){
+    public ventana() throws IOException{
         Ventana= new Ventanas();
        
-        
+        this.setIconImage(ImageIO.read(new File("src/Imagenes/Avion.png/")));
         this.setContentPane(Ventana);
         this.setFocusable(false);
         this.setTitle("River Raid");
