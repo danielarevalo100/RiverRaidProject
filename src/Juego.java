@@ -19,15 +19,6 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-
-
-/**
- *La Clase juego es la clase en la que se desarrolla toda la logica correspondiente al juego precisamente, los disparos los enemigos, 
- * todo esto se genera en esta clase.
- * 
- * 
- * @author Daniel y Yoel
- */
 public class Juego extends JPanel {
     LlenadorCombustible combustible;
     int puntos,min,seg;
@@ -62,9 +53,6 @@ public class Juego extends JPanel {
         }
         indicador=new medidor();
         aguja=new aguja(770);
-        
-        
-        
         
         this.setPreferredSize(new Dimension(800, 600));
         //this.requestFocus();
@@ -610,8 +598,6 @@ public class Juego extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
         Graphics2D g2= (Graphics2D)g;
-        
-        
         
         if (combustible!=null) {
             combustible.draw(g2);

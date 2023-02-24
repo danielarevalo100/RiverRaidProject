@@ -20,11 +20,8 @@ import javax.swing.JPanel;
  * and open the template in the editor.
  */
 
-/** Menu principal el jugador decide entre una serie de opciones dadas a traves de botones, puede decidir entre empezar el juego,
- * leer las instrucciones, ver los creditos, observar los mejores jugadores y salir.
+/** 
  * 
- * 
- *
  * @author Daniel
  */
 public class MenuPrincipal extends JPanel {
@@ -37,7 +34,7 @@ public class MenuPrincipal extends JPanel {
         this.dueño=dueños;
         this.setLayout(null);
         this.setFocusable(true);
-        jugarBoton= new JButton("JUGAR");
+        jugarBoton= new JButton("PLAY");
         jugarBoton.setFocusable(false);
         jugarBoton.setBackground(new Color(170, 38, 75));
         jugarBoton.setFont(new Font("Arial", Font.PLAIN, 35));
@@ -62,7 +59,7 @@ public class MenuPrincipal extends JPanel {
             }
         });
         
-        jugarBoton2= new JButton("JUGAR");
+        jugarBoton2= new JButton("PLAY");
         jugarBoton2.setFocusable(false);
         jugarBoton2.setBackground(new Color(170, 38, 75));
         jugarBoton2.setFont(new Font("Arial", Font.PLAIN, 18));
@@ -78,7 +75,7 @@ public class MenuPrincipal extends JPanel {
             }
         });
         
-        insBoton= new JButton("INSTRUCCIONES");
+        insBoton= new JButton("INSTRUCTIONS");
         insBoton.setFocusable(false);
         insBoton.setBackground(new Color(170, 38, 75));
         insBoton.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -94,8 +91,8 @@ public class MenuPrincipal extends JPanel {
             }
         });
         
-        
-        creditosBoton= new JButton("CREDITOS");
+        /*
+        creditosBoton= new JButton("CREDITS");
         creditosBoton.setFocusable(false);
         creditosBoton.setBackground(new Color(170, 38, 75));
         creditosBoton.setFont(new Font("Arial", Font.PLAIN, 20));
@@ -110,6 +107,7 @@ public class MenuPrincipal extends JPanel {
                 dueño.creditos();
             }
         });
+*/
         
         top10=new JButton("TOP 10");
          top10.setFocusable(false);
@@ -152,9 +150,9 @@ public class MenuPrincipal extends JPanel {
         this.setPreferredSize(new Dimension(800, 600));
         this.add(insBoton);
         this.add(jugarBoton2);
-        this.add(creditosBoton);
+        //this.add(creditosBoton);
         this.add(jugarBoton);
-        this.add(top10);
+        //this.add(top10);
         this.add(salir);
         
         

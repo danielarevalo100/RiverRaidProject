@@ -41,7 +41,7 @@ public class instrucciones extends JPanel {
         setBackground(new Color(170,38, 75));
         GridBagConstraints pos = new GridBagConstraints();
 
-        t = new JTextField("Instrucciones");
+        t = new JTextField("Instructions");
         t.setFont(new Font(Font.SANS_SERIF, Font.ROMAN_BASELINE, 50));
         t.setBackground(new Color(106,5, 22));
         t.setHorizontalAlignment(JTextField.CENTER);
@@ -59,11 +59,10 @@ public class instrucciones extends JPanel {
 
         add(t, pos);
 
-        ta1 = new JTextArea(" Buenas gente, para jugar este juego solo tendras que seguir unas simples\n"
-                + " instrucciones:\n"
-                + " 1-Usa los cursores de izquierda y derecha para moverte de un lado al otro\n"
-                + " 2-Utilizaras los cursores de arriba y abajo para aumentar o disminuir la velociada\n"
-                + " 3-Para disparar a tus enemigos pulsa la barra espaciadora");
+        ta1 = new JTextArea("Follow these instructions to play and enjoy this game\n"
+                + " 1-Use the left and right keyboard arrows to move the plane and avoid cransing with the enemies and land\n"
+                + " 2-Use up and down keyboards arrows to increase or decrease the plane speed.\n"
+                + " 3-To earn some points you will need to destroy the enemy ships by pressing the space bar to shoot them.");
         ta1.setFont(new Font(Font.SANS_SERIF, Font.ROMAN_BASELINE, 20));
         ta1.setBackground(new Color(106,5, 22));
         ta1.setEditable(false);
